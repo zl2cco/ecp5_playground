@@ -1,3 +1,15 @@
+# Verilog, iverilog files
+*.bit
+*.json
+*.config
+*.bin
+*.elf
+*.hex
+*.cap
+*.log
+*.vcd
+
+
 # Prerequisites
 *.d
 

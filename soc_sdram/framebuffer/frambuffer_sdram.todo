@@ -1,0 +1,13 @@
+Burst Write:
+✔ Check address treatment - check different column and row addresses @done (17/07/2021, 7:40:19 am)
+✔ Check all timings - tRCD timing is correct (currently 3 clocks, should be 2) @done (17/07/2021, 7:40:28 am)
+✔ Check time between terminate burst and precharge. @done (17/07/2021, 7:40:33 am)
+
+Burst Read:
+✔ Change code to burst read @done (17/07/2021, 7:40:36 am)
+☐ Test everything - formal proofing
+
+
+Connecting to physical hw:
+☐ Check data input/output settings (use status_burst_write)
+☐ Check status_burst_write asserts at the right time.
