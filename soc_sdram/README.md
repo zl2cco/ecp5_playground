@@ -1,13 +1,18 @@
-# PicoRV32 example for ECP5-EVN board
+# Image processing of video from camera to RGB LCD on an ECP5 i5 board
 
-This is a port of the soc-versa5g for the ECP5-EVN board.
 
-## Clock
+## PicoRV32
 
-This example uses the 12Mhz FTDI clock as input for the PLL and gives a 50Mhz clock
-for the CPU and UART.
+## Memory map
+0x00xx-xxxx     RAM
+0x02xx-xxxx     IO memory mapped access
+    0x0200-0000     LED
+0x03xx-xxxx     SDRAM
+0x04xx-xxxx     Timer
 
-This clock is output on Pin A19 for verification purposes
+
+
+
 
 ## UART
 

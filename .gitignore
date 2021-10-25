@@ -9,6 +9,8 @@
 *.log
 *.vcd
 
+#Other
+_archive
 
 # Prerequisites
 *.d

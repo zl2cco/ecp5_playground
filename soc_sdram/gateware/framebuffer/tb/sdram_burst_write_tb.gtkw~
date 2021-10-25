@@ -1,0 +1,103 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat Jul 17 02:58:30 2021
+[*]
+[dumpfile] "D:\Projects\ecp5_i5\ecp5_playground\soc_sdram\framebuffer\tb\dram_burst_write_tb.vcd"
+[dumpfile_mtime] "Sat Jul 17 02:57:39 2021"
+[dumpfile_size] 1619370
+[savefile] "D:\Projects\ecp5_i5\ecp5_playground\soc_sdram\framebuffer\tb\sdram_burst_write_tb.gtkw"
+[timestart] 0
+[size] 1920 1016
+[pos] -1 -1
+*-15.884993 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] sdram_burst_write_tb.
+[sst_width] 233
+[signals_width] 365
+[sst_expanded] 1
+[sst_vpaned_height] 298
+@28
+sdram_burst_write_tb.clk
+sdram_burst_write_tb.rst
+@200
+-
+@24
+sdram_burst_write_tb.cmd_i[1:0]
+@22
+sdram_burst_write_tb.adr_i[20:0]
+@24
+sdram_burst_write_tb.dat_i[31:0]
+sdram_burst_write_tb.dat_o[31:0]
+sdram_burst_write_tb.len_i[7:0]
+@420
+sdram_burst_write_tb.i
+@200
+-
+@28
+sdram_burst_write_tb.idle_o
+sdram_burst_write_tb.valid_o
+@24
+sdram_burst_write_tb.dut.address[20:0]
+sdram_burst_write_tb.dut.len[7:0]
+@200
+-
+@2024
+^1 /home/chris/Projects/i5/projects/soc_sdram/framebuffer/tb/state_descr
+sdram_burst_write_tb.dut.ctrl_state[7:0]
+@24
+sdram_burst_write_tb.dut.rdata[31:0]
+@28
+sdram_burst_write_tb.dut.ba[1:0]
+@22
+sdram_burst_write_tb.dut.ra[10:0]
+@28
+sdram_burst_write_tb.dut.a10
+@22
+sdram_burst_write_tb.dut.ca[7:0]
+@200
+-
+@28
+[color] 2
+sdram_burst_write_tb.dut.cmd_auto_refresh
+[color] 2
+sdram_burst_write_tb.dut.cmd_nop
+[color] 2
+sdram_burst_write_tb.dut.cmd_open_row
+[color] 2
+sdram_burst_write_tb.dut.cmd_precharge
+[color] 2
+sdram_burst_write_tb.dut.cmd_precharge_both
+[color] 2
+sdram_burst_write_tb.dut.cmd_read
+[color] 2
+sdram_burst_write_tb.dut.cmd_set_mode_reg
+[color] 2
+sdram_burst_write_tb.dut.cmd_term_burst
+[color] 2
+sdram_burst_write_tb.dut.cmd_write
+@200
+-
+@28
+[color] 3
+sdram_burst_write_tb.dut.status_burst_write
+@29
+sdram_burst_write_tb.dut.burst_we_o
+@28
+sdram_burst_write_tb.dut.refresh
+@200
+-
+-SDRAM Signals
+@22
+sdram_burst_write_tb.dut.sdram_clk
+@24
+sdram_burst_write_tb.dut.sdram_dq_o[31:0]
+sdram_burst_write_tb.dut.sdram_dq_i[31:0]
+@22
+sdram_burst_write_tb.dut.sdram_addr[10:0]
+@200
+-
+@28
+sdram_burst_write_tb.dut.sdram_ras_n
+sdram_burst_write_tb.dut.sdram_cas_n
+sdram_burst_write_tb.dut.sdram_we_n
+[pattern_trace] 1
+[pattern_trace] 0
