@@ -78,7 +78,7 @@ void delay() {
 void test_sdram(uint32_t start, uint32_t len) {
     uint32_t errors=0;
     char str[20];
-    unsigned int num_cycles, num_instr, cputime_start, cputime_end;
+    unsigned int num_cycles, num_instr, cputime_start, cputime_end, us;
  
     snprintf(str, 20, "%d", len);
 
@@ -105,8 +105,13 @@ void test_sdram(uint32_t start, uint32_t len) {
         }
     }
 
-    snprintf(str, 20, "%d", cputime_end - cputime_start);
+    us = (cputime_end - cputime_start)*2;
+    us = us / 100;
+    snprintf(str, 20, "%d", us);
     print(" Dur: "); print(str);
+    snprintf(str, 20, "%d", cputime_end - cputime_start);
+    print(" us ("); print(str);
+    print(" ticks)"); print(str);
 
     snprintf(str, 20, "%d", errors);
     print(" ERRORS: "); print(str); print("\n");

@@ -337,13 +337,15 @@ module picosoc (
 	picorv32 #(
 		.STACKADDR(STACKADDR),
 		.PROGADDR_RESET(PROGADDR_RESET),
-		.PROGADDR_IRQ(32'h 0000_0000),
+		.PROGADDR_IRQ(32'h 0000_0010),
 		.BARREL_SHIFTER(0),
 		.COMPRESSED_ISA(0),
-		.ENABLE_MUL(1),
-		.ENABLE_DIV(1),
+		.ENABLE_MUL(0),
+		.ENABLE_DIV(0),
 		.ENABLE_IRQ(0),
-		.ENABLE_IRQ_QREGS(0)
+		.ENABLE_IRQ_QREGS(0),
+		.CATCH_MISALIGN(0),
+		.CATCH_ILLINSN(0)
 	) cpu (
 		.clk         (clk        ),
 		.resetn      (resetn     ),

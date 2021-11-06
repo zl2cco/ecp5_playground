@@ -1,0 +1,79 @@
+# Path to the SVD template file
+_svd: svdtemplate.svd
+
+# Include other YAML files if needed.
+# Path is relative to this file location.
+#_include:
+#  - "xyz.yaml"
+
+_modify:
+  vendor: 1BitSquared
+  name: PicoRV32-SOC
+  version: 0.1
+  description: PicoRV32 SOC
+  addressUnitBits: 8
+  width: 32
+  access: read-write
+  size: 0x20
+  resetValue: 0x0
+  resetMask: 0xFFFFFFFF
+
+# Start adding peripherals
+# UART        0x02000004/8
+# SDRAM       0x03000000                                    Not Implemented 
+# FB_WRITE    0x05000000   FRAMEBUFFER Write buffer         Not Implemented 
+# FB_LINE     0x06000000   FRAMEBUFFER Read Line buffer     Not Implemented 
+# SPI         0x82000000                                    Not Implemented 
+# LED         0x02000000
+# USB_CORE    0x84000000                                    Not Implemented 
+# USB_DATA    0x85000000                                    Not Implemented 
+_add:
+  UART:
+    description: UART interface
+    groupName: UART
+    baseAddress: 0x02000000
+    addressBlock:
+      offset: 0x0
+      size:   0x00000010
+      usage: registers
+    registers:
+      CSR:
+        description: UART Config and Status Register
+        addressOffset: 0x4
+        access: read-write
+        resetValue: 0x000001B2
+        fields:
+          DIV:
+            description: Baud rate clock divider
+            bitOffset: 0
+            bitWidth: 32
+      DATA:
+        description: UART data in/out register. HSB 0 indicates pending data.
+        addressOffset: 0x8
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          DATABYTE:
+            description: The actual data input and output.
+            bitOffset: 0
+            bitWidth: 8
+  LED:
+    description: LED control
+    groupName: LED
+    baseAddress: 0x02000000
+    addressBlock:
+      offset: 0x0
+      size:   0x00000001
+      usage: registers
+    registers:
+      CSR:
+        description: Control and Status Register
+        addressOffset: 0x0
+        access: read-write
+        resetValue: 0x00000000
+        fields:
+          LED0:
+            description: Output to LED. 0 off, 1 on
+            bitOffset: 0
+            bitWidth: 1
+  

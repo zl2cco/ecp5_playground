@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
+  <vendor>1BitSquared</vendor>
+  <name>PicoRV32-SOC</name>
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <size>32</size>
+  <access>read-write</access>
+  <resetValue>0</resetValue>
+  <resetMask>4294967295</resetMask>
+  <peripherals>
+    <peripheral>
+      <name>UART</name>
+      <description>UART interface</description>
+      <groupName>UART</groupName>
+      <baseAddress>33554432</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>16</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>CSR</name>
+          <description>UART Config and Status Register</description>
+          <addressOffset>4</addressOffset>
+          <access>read-write</access>
+          <resetValue>434</resetValue>
+          <fields>
+            <field>
+              <name>DIV</name>
+              <description>Baud rate clock divider</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DATA</name>
+          <description>UART data in/out register. HSB 0 indicates pending data.</description>
+          <addressOffset>8</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>DATABYTE</name>
+              <description>The actual data input and output.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>LED</name>
+      <description>LED control</description>
+      <groupName>LED</groupName>
+      <baseAddress>33554432</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>1</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>CSR</name>
+          <description>Control and Status Register</description>
+          <addressOffset>0</addressOffset>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <fields>
+            <field>
+              <name>LED0</name>
+              <description>Output to LED. 0 off, 1 on</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+  </peripherals>
+</device>

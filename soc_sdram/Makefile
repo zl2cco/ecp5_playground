@@ -1,8 +1,8 @@
 TRELLIS?=/usr/share/trellis
-TOOL?=
-#TOOL?=/opt/riscv32i/bin
+#TOOL?=
+TOOL?=/opt/riscv32im/bin
 
-COMPILER?=riscv64-elf-
+COMPILER?=$(TOOL)/riscv32-unknown-elf-
 
 PROJECT=picosoc
 LPF=i5.lpf
